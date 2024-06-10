@@ -8,6 +8,13 @@ pipeline{
                 '''
             }
         }
+        stage('Delete'){
+            steps{
+                bat '''
+                pm2 delete
+                '''
+            }
+        }
         stage('Run') {
             steps {
                 bat '''
